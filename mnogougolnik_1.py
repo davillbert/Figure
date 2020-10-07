@@ -11,6 +11,9 @@ class Edge:
     def __init__(self, p1, p2):
         # переменные экземпляра класса. их значения доступны только объекту
         self.p1, self.p2 = (p1, p2)
+        self.a = (self.p2.y - self.p1.y)/(self.p2.x - self.p1.x)
+        self.b = self.p1.y - (self.a * self.p1.x)
+
     def __repr__(self):
         return "Edge(%s, %s)" % (self.p1, self.p2)
     def info(self):
